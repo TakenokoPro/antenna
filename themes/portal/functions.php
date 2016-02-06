@@ -317,4 +317,12 @@ function pagination($pages = '', $range = 3)
  if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a rel='nofollow' class='inactive' href='".get_pagenum_link($pages)."'>Last &raquo;</a>";
  echo "</ul></div>"; }}
 
+/*===================================================================================*/
+function rss_get() {
+	echo "RSS";
+	$file = "get_rss";
+	include(get_theme_root() . '/' . get_template() . "/$file.php");
+}
+add_shortcode('rss_get', 'rss_get');
+
 ?>
